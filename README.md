@@ -1,17 +1,3 @@
-[![Slam](https://telegra.ph/file/db03910496f06094f1f7a.jpg)](https://youtu.be/Pk_TthHfLeE)
-
-# Slam Mirror Bot
-![GitHub Repo stars](https://img.shields.io/github/stars/breakdowns/slam-mirrorbot?color=blue&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/breakdowns/slam-mirrorbot?color=green&style=flat)
-![GitHub issues](https://img.shields.io/github/issues/breakdowns/slam-mirrorbot)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/breakdowns/slam-mirrorbot)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/breakdowns/slam-mirrorbot)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/breakdowns/slam-mirrorbot)
-![GitHub contributors](https://img.shields.io/github/contributors/breakdowns/slam-mirrorbot?style=flat)
-![GitHub repo size](https://img.shields.io/github/repo-size/breakdowns/slam-mirrorbot?color=red)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/breakdowns/slam-mirrorbot)
-![GitHub](https://img.shields.io/github/license/breakdowns/slam-mirrorbot)
-[![Slam Mirror Support](https://img.shields.io/badge/slam%20mirror%20bot-support%20group-blue)](https://t.me/SlamMirrorSupport)
 
 **Slam Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
 
@@ -67,35 +53,7 @@ APM, ARJ, CHM, CPIO, CramFS, DEB, DMG, FAT,
 HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS, 
 NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 ```
-
-# How to deploy?
-Deploying is pretty much straight forward and is divided into several steps as follows:
-## Installing requirements
-
-- Clone this repo:
-```
-git clone https://github.com/breakdowns/slam-mirrorbot mirrorbot/
-cd mirrorbot
-```
-
-- Install requirements
-For Debian based distros
-```
-sudo apt install python3
-```
-Install Docker by following the [official Docker docs](https://docs.docker.com/engine/install/debian/)
-
-- For Arch and it's derivatives:
-```
-sudo pacman -S docker python
-```
-- Install dependencies for running setup scripts:
-```
-pip3 install -r requirements-cli.txt
-```
-## Generate Database
-<details>
-    <summary><b>Click here for more details</b></summary>
+How To deploy :-
 
 **1. Using ElephantSQL**
 - Go to https://elephantsql.com/ and create account (skip this if you already have ElephantSQL account)
@@ -115,17 +73,8 @@ pip3 install -r requirements-cli.txt
 </details>
 
 ## Setting up config file
-<details>
-    <summary><b>Click here for more details</b></summary>
 
-```
-cp config_sample.env config.env
-```
-- Remove the first line saying:
-```
-_____REMOVE_THIS_LINE_____=True
-```
-Fill up rest of the fields. Meaning of each fields are discussed below:
+Fill up the fields. Meaning of each fields are discussed below:
 ### Required Field
 - **BOT_TOKEN**: The Telegram bot token that you get from [@BotFather](https://t.me/BotFather)
 - **TELEGRAM_API**: This is to authenticate to your Telegram account for downloading Telegram files. You can get this from https://my.telegram.org DO NOT put this in quotes.
@@ -197,19 +146,6 @@ python3 generate_drive_token.py
 
 ## Deploying
 
-- Start Docker daemon (skip if already running):
-```
-sudo dockerd
-```
-- Build Docker image:
-```
-sudo docker build . -t mirrorbot
-```
-- Run the image:
-```
-sudo docker run mirrorbot
-```
-
 ## Deploying on Heroku
 
 - Give stars and Fork this repo then upload **token.pickle** to your forks
@@ -222,8 +158,6 @@ sudo docker run mirrorbot
 ## Deploying on Heroku with heroku-cli and Goorm IDE
 <p><a href="https://telegra.ph/How-to-Deploy-a-Mirror-Bot-to-Heroku-with-CLI-05-06"> <img src="https://img.shields.io/badge/see%20on%20telegraph-grey?style=for-the-badge" width="190""/></a></p>
 
-## Video Tutorial deploying slam-mirrorbot on Heroku
-<p><a href="https://www.youtube.com/watch?v=WIhL0TrisfQ&t=1s"> <img src="https://img.shields.io/badge/See%20On%20Youtube-black?style=for-the-badge&logo=youtube" width="200""/></a></p>
 
 **NOTE**: Recommended to generate **token.pickle** manually. [Read here](https://github.com/breakdowns/slam-mirrorbot#getting-google-oauth-api-credential-file)
 
